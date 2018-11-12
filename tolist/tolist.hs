@@ -1,7 +1,7 @@
 import Data.List.Split
 import System.Environment
 
-splitDelim s = splitWhen (\c -> (c==' ' || c==',')) s
+splitDelim s = splitWhen (\c -> (c==' ' || c==',' || c=='\n' || c=='\t')) s
 clean s = filter (/="") s
 
 main = do
