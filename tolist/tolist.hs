@@ -16,4 +16,7 @@ checkSingleQuotesArg args
 main = do
      args <- getArgs
      let raw = head args
-     if checkSingleQuotesArg args == True then putStrLn $ pystring $ clean (splitDelim raw) else print $ clean (splitDelim raw) 
+     if checkSingleQuotesArg args == True 
+        then putStrLn $ pystring $ clean (splitDelim raw) 
+     else print $ clean (splitDelim raw) 
+
